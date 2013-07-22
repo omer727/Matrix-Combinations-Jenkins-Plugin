@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>1.509</version>
+    </parent>
+    <artifactId>matrix-combinations-parameter</artifactId>
+    <packaging>hpi</packaging>
+    <name>Matrix Configuration Parameter Plugin</name>
+    <version>1.0.3-SNAPSHOT</version>
+    <url>http://wiki.jenkins-ci.org/display/JENKINS/Matrix-Combination-Parameter</url>
+
+    <!--<scm>-->
+        <!--<connection>scm:git:git://github.com/jenkinsci/matrix-combination-parameter-plugin.git</connection>-->
+        <!--<developerConnection>scm:git:git@github.com:jenkinsci/matrix-combination-parameter-plugin.git</developerConnection>-->
+        <!--<url>http://github.com/jenkinsci/matrix-combination-parameter-plugin</url>-->
+    <!--</scm>-->
+
+    <!--<developers>-->
+        <!--<developer>-->
+            <!--<id>omer727</id>-->
+            <!--<name>Omer Shem-Tov</name>-->
+            <!--<email>omer727@yahoo.com</email>-->
+            <!--<timezone>+2</timezone>-->
+        <!--</developer>-->
+    <!--</developers>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.2.1</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>1.5</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jenkins-ci.tools</groupId>
+                <artifactId>maven-hpi-plugin</artifactId>
+                <version>1.95</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>  
