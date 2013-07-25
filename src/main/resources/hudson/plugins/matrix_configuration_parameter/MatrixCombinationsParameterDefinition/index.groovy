@@ -1,4 +1,4 @@
-package hudson.plugins.matrix_configuration_parameter.matrixconfigurationparameterDefinition
+package hudson.plugins.matrix_configuration_parameter.matrixcombinationparameterDefinition
 
 import hudson.matrix.AxisList
 import hudson.matrix.Combination
