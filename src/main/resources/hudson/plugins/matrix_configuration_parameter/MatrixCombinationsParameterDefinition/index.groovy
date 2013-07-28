@@ -144,7 +144,7 @@ private void drawMainBall(Combination combination,AxisList axes,String matrixNam
         if (lastRun != null){
             a(href:request.getRootPath()+"/"+lastRun.getUrl()){
             img(src: "${imagesURL}/24x24/"+lastRun.getBuildStatusUrl())
-            f.checkbox(checked: "false", name: "values",id: "checkbox"+matrixName, value: lastRun.getResult().ordinal)
+            f.checkbox(checked: "false", name: "values",id: "checkbox"+matrixName)
             input(type: "hidden", name: "confs", value: combination.toString())
             }
 
