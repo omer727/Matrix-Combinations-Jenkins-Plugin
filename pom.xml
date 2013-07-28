@@ -10,22 +10,14 @@
     <packaging>hpi</packaging>
     <name>Matrix Configuration Parameter Plugin</name>
     <version>1.0.3-SNAPSHOT</version>
-    <url>http://wiki.jenkins-ci.org/display/JENKINS/Matrix-Combination-Parameter</url>
+    <url>https://wiki.jenkins-ci.org/display/JENKINS/Matrix+Combinations+Plugin</url>
 
-    <!--<scm>-->
-        <!--<connection>scm:git:git://github.com/jenkinsci/matrix-combination-parameter-plugin.git</connection>-->
-        <!--<developerConnection>scm:git:git@github.com:jenkinsci/matrix-combination-parameter-plugin.git</developerConnection>-->
-        <!--<url>http://github.com/jenkinsci/matrix-combination-parameter-plugin</url>-->
-    <!--</scm>-->
+	<scm>
+		<connection>scm:git:ssh://github.com/omer727/Matrix-Combinations-Jenkins-Plugin.git</connection>
+		<developerConnection>scm:git:ssh://github.com/omer727/Matrix-Combinations-Jenkins-Plugin.git</developerConnection>
+		<url>https://github.com/omer727/Matrix-Combinations-Jenkins-Plugin</url>
+	</scm>
 
-    <!--<developers>-->
-        <!--<developer>-->
-            <!--<id>omer727</id>-->
-            <!--<name>Omer Shem-Tov</name>-->
-            <!--<email>omer727@yahoo.com</email>-->
-            <!--<timezone>+2</timezone>-->
-        <!--</developer>-->
-    <!--</developers>-->
 
     <build>
         <plugins>
