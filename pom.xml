@@ -5,11 +5,13 @@
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
         <version>1.509</version>
+		<!--<relativePath>pom.xml</relativePath>-->
     </parent>
     <artifactId>matrix-combinations-parameter</artifactId>
     <packaging>hpi</packaging>
+	
     <name>Matrix Configuration Parameter Plugin</name>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/Matrix+Combinations+Plugin</url>
 
 	<scm>
@@ -19,30 +21,15 @@
 	</scm>
 
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.2.1</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.scm</groupId>
-                        <artifactId>maven-scm-provider-gitexe</artifactId>
-                        <version>1.5</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
+	<distributionManagement>
+		<repository>
+		  <id>maven.jenkins-ci.org</id>
+		  <url>http://maven.jenkins-ci.org:8081/content/repositories/releases/</url>
+		</repository>
+	  </distributionManagement>
 
-            <plugin>
-                <groupId>org.jenkins-ci.tools</groupId>
-                <artifactId>maven-hpi-plugin</artifactId>
-                <version>1.95</version>
-            </plugin>
-        </plugins>
-    </build>
-
-    <repositories>
+	  <!--
+	<repositories>
         <repository>
             <id>repo.jenkins-ci.org</id>
             <url>http://repo.jenkins-ci.org/public/</url>
@@ -55,4 +42,37 @@
             <url>http://repo.jenkins-ci.org/public/</url>
         </pluginRepository>
     </pluginRepositories>
+	-->
+
+    <build>
+        <plugins>
+           <!-- <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.2.1</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>1.5</version>
+                    </dependency>
+                </dependencies>
+            </plugin> -->
+
+			
+			  <plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+				  <goals>deploy</goals>
+				</configuration>
+			  </plugin>
+			
+            <plugin>
+                <groupId>org.jenkins-ci.tools</groupId>
+                <artifactId>maven-hpi-plugin</artifactId>
+                <version>1.95</version>
+            </plugin>
+        </plugins>
+    </build>
+	 
 </project>  
