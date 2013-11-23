@@ -11,13 +11,13 @@
     <packaging>hpi</packaging>
 	
     <name>Matrix Configuration Parameter Plugin</name>
-    <version>1.0.5</version>
+    <version>1.0.6-SNAPSHOT</version>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/Matrix+Combinations+Plugin</url>
 
 	<scm>
-		<connection>scm:git:ssh://github.com/omer727/Matrix-Combinations-Jenkins-Plugin.git</connection>
-		<developerConnection>scm:git:ssh://github.com/omer727/Matrix-Combinations-Jenkins-Plugin.git</developerConnection>
-		<url>https://github.com/omer727/Matrix-Combinations-Jenkins-Plugin</url>
+		<connection>scm:git:ssh://github.com/jenkinsci/Matrix-Combinations-Jenkins-Plugin.git</connection>
+		<developerConnection>scm:git:ssh://github.com/jenkinsci/Matrix-Combinations-Jenkins-Plugin.git</developerConnection>
+		<url>https://github.com/jenkinsci/Matrix-Combinations-Jenkins-Plugin</url>
 	</scm>
 
 
