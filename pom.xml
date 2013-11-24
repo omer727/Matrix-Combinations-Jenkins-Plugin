@@ -15,8 +15,8 @@
     <url>https://wiki.jenkins-ci.org/display/JENKINS/Matrix+Combinations+Plugin</url>
 
 	<scm>
-		<connection>https://github.com/jenkinsci/matrix-combinations-plugin.git</connection>
-		<developerConnection>https://github.com/jenkinsci/matrix-combinations-plugin.git</developerConnection>
+		<connection>scm:git:https://github.com/jenkinsci/Matrix-Combinations-Plugin.git</connection>
+		<developerConnection>scm:git:https://github.com/jenkinsci/Matrix-Combinations-Plugin.git</developerConnection>
 		<url>https://github.com/jenkinsci/matrix-combinations-plugin.git</url>
 	</scm>
 
