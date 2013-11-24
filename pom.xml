@@ -18,7 +18,16 @@
 		<url>https://github.com/omer727/Matrix-Combinations-Jenkins-Plugin</url>
 	</scm>
 
-
+	<developers>
+        <developer>
+            <id>omer727</id>
+            <name>Omer Shem-Tov</name>
+            <email>omer727@yahoo.com</email>
+            <timezone>+2</timezone>
+        </developer>
+    </developers>
+	
+	
     <build>
         <plugins>
             <plugin>
