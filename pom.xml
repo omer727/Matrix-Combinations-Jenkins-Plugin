@@ -5,53 +5,31 @@
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
         <version>1.509</version>
+		<!--<relativePath>pom.xml</relativePath>-->
     </parent>
     <artifactId>matrix-combinations-parameter</artifactId>
     <packaging>hpi</packaging>
+	
     <name>Matrix Configuration Parameter Plugin</name>
-    <version>1.0.3-SNAPSHOT</version>
-    <url>https://wiki.jenkins-ci.org/display/JENKINS/Matrix+Combinations+Plugin</url>
+    <version>1.0.5-SNAPSHOT</version>
+    <url>https://wiki.jenkins-ci.org/display/JENKINS/matrix+combinations+plugin</url>
 
 	<scm>
-		<connection>scm:git:ssh://github.com/omer727/Matrix-Combinations-Jenkins-Plugin.git</connection>
-		<developerConnection>scm:git:ssh://github.com/omer727/Matrix-Combinations-Jenkins-Plugin.git</developerConnection>
-		<url>https://github.com/omer727/Matrix-Combinations-Jenkins-Plugin</url>
+		<connection>scm:git:https://github.com/jenkinsci/matrix-combinations-plugin.git</connection>
+		<developerConnection>scm:git:https://github.com/jenkinsci/matrix-combinations-plugin.git</developerConnection>
+		<url>https://github.com/jenkinsci/matrix-combinations-plugin.git</url>
 	</scm>
 
-	<developers>
-        <developer>
-            <id>omer727</id>
-            <name>Omer Shem-Tov</name>
-            <email>omer727@yahoo.com</email>
-            <timezone>+2</timezone>
-        </developer>
-    </developers>
-	
-	
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.2.1</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.scm</groupId>
-                        <artifactId>maven-scm-provider-gitexe</artifactId>
-                        <version>1.5</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
 
-            <plugin>
-                <groupId>org.jenkins-ci.tools</groupId>
-                <artifactId>maven-hpi-plugin</artifactId>
-                <version>1.95</version>
-            </plugin>
-        </plugins>
-    </build>
+	<distributionManagement>
+		<repository>
+		  <id>maven.jenkins-ci.org</id>
+		  <url>http://maven.jenkins-ci.org:8081/content/repositories/releases/</url>
+		</repository>
+	  </distributionManagement>
 
-    <repositories>
+	  <!--
+	<repositories>
         <repository>
             <id>repo.jenkins-ci.org</id>
             <url>http://repo.jenkins-ci.org/public/</url>
@@ -64,4 +42,45 @@
             <url>http://repo.jenkins-ci.org/public/</url>
         </pluginRepository>
     </pluginRepositories>
+	-->
+
+    <dependencies>
+      <dependency>
+        <groupId>com.sonyericsson.hudson.plugins.rebuild</groupId>
+        <artifactId>rebuild</artifactId>
+        <version>1.21</version> <!-- RebuildParameterProvider is available since 1.21 -->
+        <optional>true</optional>
+      </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+           <!-- <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.2.1</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>1.5</version>
+                    </dependency>
+                </dependencies>
+            </plugin> -->
+
+			
+			  <plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+				  <goals>deploy</goals>
+				</configuration>
+			  </plugin>
+			
+            <plugin>
+                <groupId>org.jenkins-ci.tools</groupId>
+                <artifactId>maven-hpi-plugin</artifactId>
+                <version>1.95</version>
+            </plugin>
+        </plugins>
+    </build>
+	 
 </project>  

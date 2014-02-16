@@ -2,5 +2,5 @@
   This view is used to render the plugin list page.
 -->
 <div>
-  Adds a new parameter type Matrix Combination Parameter, which allows to choose which matrix combinations you want to run
+  Adds a new parameter type called Matrix Combinations Parameter which allows the user to choose which matrix combinations he wants to run
 </div>
